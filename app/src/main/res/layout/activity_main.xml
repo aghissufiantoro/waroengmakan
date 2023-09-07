@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="70dp">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="425dp"
+            android:layout_height="434dp"
+            android:src="@color/bgshape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="-8dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="53dp"
+            android:layout_height="49dp"
+            app:srcCompat="@drawable/baseline_shopping_cart_checkout_24"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="245dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="53dp"
+            android:layout_height="49dp"
+            app:srcCompat="@drawable/baseline_account_circle_24"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="310dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/menu_awal"
+            android:layout_width="503dp"
+            android:layout_height="154dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="260dp">
+
+            <ImageView
+                android:id="@+id/gambar_nasi"
+                android:layout_width="79dp"
+                android:layout_height="88dp"
+                android:src="@drawable/nasi_gila"
+                app:layout_constraintEnd_toStartOf="@+id/lauk"
+                app:layout_constraintHorizontal_bias="0.364"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/nasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:text="Nasi"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/gambar_nasi"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="101dp" />
+
+            <ImageView
+                android:id="@+id/lauk"
+                android:layout_width="79dp"
+                android:layout_height="88dp"
+                android:layout_marginEnd="128dp"
+                android:src="@drawable/lauk"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/susu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="monospace"
+                android:text="Susu"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/imagesusu"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="421dp" />
+
+            <ImageView
+                android:id="@+id/imagesusu"
+                android:layout_width="79dp"
+                android:layout_height="88dp"
+                android:layout_marginStart="32dp"
+                android:src="@drawable/susu"
+                app:layout_constraintStart_toEndOf="@+id/lauk"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/sayur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:text="Sayur"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/imagesayur"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="201dp" />
+
+            <ImageView
+                android:id="@+id/imagesayur"
+                android:layout_width="79dp"
+                android:layout_height="88dp"
+                android:src="@drawable/sayur"
+                app:layout_constraintEnd_toStartOf="@+id/lauk"
+                app:layout_constraintStart_toEndOf="@+id/gambar_nasi"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/ayam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:text="Lauk"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/lauk"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="311dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_home"
+            android:layout_width="351dp"
+            android:layout_height="151dp"
+            android:background="@drawable/makanan_tradisional"
+            android:scrollbarTrackVertical="parent"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="99dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="263dp"
+                android:layout_height="60dp"
+                android:layout_margin="44dp"
+                android:background="@color/birdong"
+                android:fontFamily="cursive"
+                android:text="25%"
+                android:textColor="#FFFFFF"
+                android:textSize="45dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="144dp"
+                android:layout_marginTop="48dp"
+                android:text="Diskon 25%"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="144dp"
+                android:layout_marginTop="69dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Pesan makan di app dan dapatkan diskon"
+                android:textColor="@color/white" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="145dp"
+            android:layout_height="29dp"
+            android:text="Hai Binarian!!"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="190dp"
+            android:layout_height="32dp"
+            android:text="Mau Makan apenih hari ini?"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="44dp" />
+
+        <TextView
+            android:id="@+id/title_list_menu_makanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="440dp"
+            android:text="List Menu Makanan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/activity_horizontal_margin"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="480dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:outlineAmbientShadowColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:id="@+id/menu_makanan1"
+                android:layout_width="175dp"
+                android:layout_height="220dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/gambar_menu1"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:src="@drawable/ayam_bakar" />
+
+                <TextView
+                    android:id="@+id/nama_menu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="4dp"
+                    android:text="Ayam Bakar"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Harga_menu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="start"
+                    android:text="Rp 50.000,-"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_makanan2"
+                android:layout_width="175dp"
+                android:layout_height="220dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/gambar_menu2"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:src="@drawable/ayam_geprek" />
+
+                <TextView
+                    android:id="@+id/nama_menu2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Geprek Mba Rara"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Harga_menu2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="start"
+                    android:text="Rp 10.000,-"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
